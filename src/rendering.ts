@@ -13,7 +13,7 @@ const LAYOUT_TEMPLATE = `
 `;
 
 const METADATA_TEMPLATE = `
-## Metadata
+---
 url: [{{url}}]({{url}})
 {% if author %}
 author: {{author}}
@@ -30,6 +30,8 @@ note: {{note}}
 {% if tags %}
 tags: {% for tag in tags %}{{tag | replace(' ', '_')}}{% if not loop.last %}, {% endif %}{% endfor%}
 {% endif %}
+
+---
 `;
 
 const HIGHLIGHT_TEMPLATE = `
