@@ -14,7 +14,7 @@ const LAYOUT_TEMPLATE = `
 
 const METADATA_TEMPLATE = `
 ---
-url: [{{url}}]({{url}})
+url: {{url}}
 {% if author %}
 author: {{author}}
 {% endif %}
