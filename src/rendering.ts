@@ -14,21 +14,21 @@ const LAYOUT_TEMPLATE = `
 
 const METADATA_TEMPLATE = `
 ## Metadata
-* URL: [{{url}}]({{url}})
+url: [{{url}}]({{url}})
 {% if author %}
-* Author: {{author}}
+author: {{author}}
 {% endif %}
 {% if publisher %}
-* Publisher: {{publisher}}
+publisher: {{publisher}}
 {% endif %}
 {% if published_date %}
-* Published Date: {{published_date|date("YYYY-MM-DD")}}
+published: {{published_date|date("YYYY-MM-DD")}}
 {% endif %}
 {% if note %}
-* Note: {{note}}
+note: {{note}}
 {% endif %}
 {% if tags %}
-* Tags: {% for tag in tags %}#{{tag | replace(' ', '_')}}{% if not loop.last %}, {% endif %}{% endfor%}
+tags: {% for tag in tags %}{{tag | replace(' ', '_')}}{% if not loop.last %}, {% endif %}{% endfor%}
 {% endif %}
 `;
 
