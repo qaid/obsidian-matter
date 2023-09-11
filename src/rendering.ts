@@ -24,14 +24,16 @@ publisher: {{publisher}}
 {% if published_date %}
 published: {{published_date|date("YYYY-MM-DD")}}
 {% endif %}
-{% if note %}
-note: {{note}}
-{% endif %}
 {% if tags %}
 tags: {% for tag in tags %}{{tag | replace(' ', '_')}}{% if not loop.last %}, {% endif %}{% endfor%}
 {% endif %}
 
 ---
+
+{% if note %}
+## Notes:
+{{note}}
+{% endif %}
 `;
 
 const HIGHLIGHT_TEMPLATE = `
